@@ -1,11 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Feed from './feed/Feed';
+import Followers from './followers/Followers';
 
 function App() {
   return (
-    <Feed></Feed>
+    <div className="container">
+      <div className="row">
+        <div className="col">
+          <Feed></Feed>
+        </div>
+        <div className="col">
+          <Followers></Followers>
+        </div>
+      </div>
+    </div>
   );
 }
 
