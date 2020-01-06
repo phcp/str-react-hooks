@@ -6,7 +6,7 @@ Esse é o projeto base que será usado para os workshops da semana Tech Radar.
 - Styled Components
 - Jest e Jest-When
 
-## Passo-a-passo
+## Passo a passo
 1. Clone o repositório na sua máquina:
 
     `git clone https://github.com/phcp/str-react-hooks.git`
