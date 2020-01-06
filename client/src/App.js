@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import Feed from './feed/Feed';
 import Followers from './followers/Followers';
 
@@ -7,11 +6,11 @@ function App() {
   return (
     <div className="container">
       <div className="row">
-        <div className="col">
-          <Feed></Feed>
+        <div className="col" style={{ marginTop: "20px" }} >
+          <Feed />
         </div>
         <div className="col">
-          <Followers></Followers>
+          <Followers />
         </div>
       </div>
     </div>

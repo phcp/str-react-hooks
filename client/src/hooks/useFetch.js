@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const baseUrl = 'http://7380c9a6.ngrok.io/';
+const baseUrl = 'http://localhost:3001/';
 
 export const useFetch = (endpoint) => {
     const [data, setData] = useState([]);
