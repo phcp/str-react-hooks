@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const CardImage = styled.div`
+const Card = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -25,12 +25,12 @@ font-weight: bold;
 
 const Post = ({ description, imageUrl }) => {
     return (
-        <CardImage>
+        <Card>
             <Image src={imageUrl} />
             <Subtitle>
                 {description}
             </Subtitle>
-        </CardImage>
+        </Card>
     );
 };
 
