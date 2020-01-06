@@ -22,3 +22,7 @@ Esse é o projeto base que será usado para os workshops da semana Tech Radar.
 4. Execute o projeto no modo `watch`:
 
     `npm run start`
+
+## Ambiente
+- [Node.js](https://nodejs.org/)
+- [Visual Studio Code](https://code.visualstudio.com/)
