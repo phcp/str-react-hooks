@@ -13,7 +13,5 @@ export const useFetch = (endpoint) => {
             });
     }, [endpoint]);
 
-    return {
-        data
-    };
+    return data;
 }

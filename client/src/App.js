@@ -1,11 +1,12 @@
 import React from 'react';
 import Feed from './feed/Feed';
-import Followers from './followers/Followers';
+import Followers from './feed/Followers';
 
 function App() {
   return (
     <>
-      <Feed></Feed>
+      <Feed />
+      <Followers />
     </>
   );
 }
