@@ -10,7 +10,7 @@ export default class Followers extends React.Component {
     }
 
     componentDidMount() {
-        fetch('http://7380c9a6.ngrok.io/users')
+        fetch('http://58faa7da.ngrok.io/users')
             .then(users => users.json())
             .then(users => {
                 this.setState({users})
