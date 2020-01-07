@@ -11,7 +11,7 @@ export default class Feed extends React.Component {
     }
 
     componentDidMount() {
-        fetch('http://7380c9a6.ngrok.io/users/1/posts')
+        fetch('http://739fce07.ngrok.io/users/1/posts')
             .then(posts => posts.json())
             .then(posts => {
                 this.setState({posts})
