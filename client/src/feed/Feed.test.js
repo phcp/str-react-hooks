@@ -1,15 +1,15 @@
 import React from 'react';
-import {render, waitForElement} from '@testing-library/react';
+import {render} from '@testing-library/react';
 import Feed from './Feed';
-import { when } from 'jest-when';
-import { jsonResponse } from '../util/mock';
+import {when} from 'jest-when';
 
-const fetchMock = jest.fn();
+const fetchHooks = require('../hooks/useFetch');
 
-when(fetchMock)
-    .calledWith(expect.stringContaining('users/1/posts'))
-    .mockResolvedValue(
-        jsonResponse([
+const useFetchMock = jest.fn();
+
+when(useFetchMock)
+    .calledWith('users/1/posts')
+    .mockReturnValue([
             {
                 description: 'description one',
                 imageUrl: 'path/to/image'
@@ -18,19 +18,15 @@ when(fetchMock)
                 description: 'description two',
                 imageUrl: 'path/to/image'
             }
-        ])
+        ]
     );
 
-window.fetch = fetchMock;
+fetchHooks.useFetch = useFetchMock;
 
 describe('The feed component', () => {
     test('should render with two descriptions', async () => {
         const {getByText} = render(<Feed />);
 
-        const description1 = await waitForElement(() => getByText('description one'));
-        const description2 = await waitForElement(() => getByText('description two'));
-
-        expect(description1).toBeInTheDocument();
-        expect(description2).toBeInTheDocument();
+        expect(getByText('description one')).toBeInTheDocument();
     });
 });
